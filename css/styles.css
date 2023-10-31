@@ -82,6 +82,8 @@ body {
   letter-spacing: 0.48px;
   margin-bottom: 4px;
   display: flex;
+  line-height: 1.17;
+  display: block;
 }
 
 .modal-btn-finish {
@@ -106,6 +108,10 @@ body {
   max-width: 360px;
   width: 100%;
   margin: 0 auto;
+}
+
+.modal-div:nth-child(4){
+  margin-bottom: 16px;
 }
 
 .modal-txt {
@@ -145,6 +151,8 @@ body {
   height: 40px;
   padding-left: 38px;
   outline: transparent;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus-within {
@@ -154,7 +162,9 @@ body {
 .modal-name-svg {
   position: absolute;
   left: 16px;
-  bottom: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus-within + .modal-name-svg {
@@ -202,6 +212,7 @@ body {
   background-color: var(--NAVY-BLUE-modal);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
 }
 
 .modal {
@@ -213,8 +224,11 @@ body {
 
 .modal-form-name {
   display: flex;
-  gap: 8px;
   flex-direction: column;
+}
+
+.modal-div:not(:last-child){
+  margin-bottom: 8px;
 }
 
 .modal-btn {
@@ -702,7 +716,7 @@ body {
   border: none;
   color: var(--WHITE);
   text-align: center;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -712,6 +726,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 8px 24px;
+  cursor: pointer;
 }
 
 .btn-subscribe-svg {
